@@ -1,0 +1,52 @@
+## Microservice Architecture
+
+# prerequisites
+ - docker 
+ - python
+ - kubectl
+ - mysql or postgresql
+ - kubernetes cluster ( kind, minikube, eks, aks)
+ - k9s ( dashboard) 
+
+we focus on architecture so we deploy our services in local cluster with minikube.
+   
+
+# 1. Auth service
+  - create a python/src/auth repo 
+  - python3 -m venv venv
+  - source ./venv/bin/activate 
+  - env | grep VIRTUAL
+  - we can install for vim configuration:  
+      - pip install pylint
+      - pip install jedi
+    - pip install pyjwt (allow you to encode & decode json web tokens)
+    - pip install flask
+    - pip install flask_mysqldb
+
+    so in server.py we configure our first authentication server
+    then we create a init.sql and we create a user and database and table
+      - for connecting to the database : mysql -u root > show databases;
+      - mysql -u root < init.sql
+        -> show databases;
+        ->use auth;
+        -> show tables;
+        -> describe user;
+        -> select * from user;
+      - mysql -uroot -e "DROP USER auth_user@localhost"
+      - mysql -uroot -e "DROP DATABASE auth"
+
+      - Basic Auth
+      - JSON web tokens
+
+      - create a Dockerfile
+      - pip3 freeze > requirements.txt ( run it inside the virtual envirements)
+
+      - docker build .
+
+
+
+
+
+
+
+
