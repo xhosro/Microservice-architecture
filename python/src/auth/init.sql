@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS user (
 );
 
 -- Insert a new user into the user table
-INSERT INTO user (email, password) VALUES ('khosro@mail.com', 'admin123');
+INSERT INTO user (email, password) VALUES ('khosro@mail.com', 'azerty123');
 
 
 # 

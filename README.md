@@ -42,8 +42,16 @@ we focus on architecture so we deploy our services in local cluster with minikub
       - pip3 freeze > requirements.txt ( run it inside the virtual envirements)
 
       - docker build .
+      -docker tag <imagename:latest>
+      - docker push rhosrow/auth:latest
 
-
+Create a kubernetes manifest files for deployment of auth app.
+so we create a deployment , configmap, secret and service yaml files 
+and the we deploy it in minikube
+    - minikube start --kubernetes-version=v1.30.0 --driver=docker
+    - kubectl apply -f ./
+    - kubectl get pods
+    
 
 
 
