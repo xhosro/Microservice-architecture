@@ -70,6 +70,16 @@ and the we deploy it in minikube
           from storage import util
 
 
+     we make a 3 folder for storage & auth_svc & auth
+
+     
+      - create a Dockerfile
+      - pip3 freeze > requirements.txt ( run it inside the virtual envirements)
+
+      then kubernetes manifest with ingress 
+
+        - minikube addons list
+        - minikube addons enable ingress
 
 
 
