@@ -51,7 +51,23 @@ and the we deploy it in minikube
     - minikube start --kubernetes-version=v1.30.0 --driver=docker
     - kubectl apply -f ./
     - kubectl get pods
-    
+
+
+# 2. gateway 
+   python3 -m venv venv 
+   source ./venv/bin/activate
+   env | grep ENV
+   pip3 install jedi 
+   pip3 install pylint
+   touch server.py
+
+   then we install all dependencies
+          import os, gridfs, pika, json
+          from flask import Flask, request, jsonify
+          from flask_pymongo import PyMongo
+          from auth import validate
+          from auth_svc import access
+          from storage import util
 
 
 
