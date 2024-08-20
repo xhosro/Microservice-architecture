@@ -80,7 +80,15 @@ and the we deploy it in minikube
 
         - minikube addons list
         - minikube addons enable ingress
+        - kubectl apply -f ./
 
 
 
 
+# 3. rabbitmq
+
+we need statfulset for rabbit because if pods fails , the messages dont be droped too
+
+ - kubectl scale deployment --replicas=0 gateway
+
+ 
