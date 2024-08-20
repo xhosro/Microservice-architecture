@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: gateway
-          image: rhosrow/gateway:latest
+          image: rhosrow/gateway:v1.0.2
           ports: 
             - containerPort: 8080
           envFrom:

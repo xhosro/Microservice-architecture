@@ -6,9 +6,8 @@ from auth_svc import access
 from storage import util
 
 server = Flask(__name__)
-server.config["MONGO_URL"] = "mongodb://host.minikube.internal:27017/videos"
 
-mongo = PyMongo(server)
+mongo = PyMongo(server, uri="mongodb://host.minikube.internal:27017/videos")
 
 fs = gridfs.GridFS(mongo.db)
 
@@ -48,7 +47,7 @@ def upload():
     
     
 @server.route("/download", methods=["GET"])
-daf download():
+def download():
     pass
 
 

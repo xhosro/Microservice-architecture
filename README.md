@@ -91,4 +91,6 @@ we need statfulset for rabbit because if pods fails , the messages dont be drope
 
  - kubectl scale deployment --replicas=0 gateway
 
+ I create all of the rabbitmq manifests
+ and then run again gateway pods
  
